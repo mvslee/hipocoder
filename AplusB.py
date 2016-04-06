@@ -2,13 +2,14 @@
 
 
 
-a = eval(input("Please input integer A, 0<=A<=100: "))
-b = eval(input('Please input integer B, 0<=B<=100: '))
-if type(a)!=int or type(b)!=int:
-    raise TypeError("invalid input type!")
-if a<0 or a>100 or b<0 or b>100:
-    raise ValueError("invalid input value!")
-else:
-    print(a+b)
+'''Input a series of data, each series contain two numbers,
+calculate the sum of each set'''
+
+while True:
+    try:
+        (x,y) = (int(x) for x in raw_input().split())
+        print x+y
+    except EOFError:
+        break
 
 
